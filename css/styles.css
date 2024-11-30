@@ -1,0 +1,321 @@
+.dentist-list-container {
+  font-family: Montserrat;
+}
+.dentist-list {
+  padding: 0 20px 20px 20px;
+  background: #fff;
+}
+
+.dentist-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.dentist-item:last-child {
+  border-bottom: none;
+}
+
+.dentist-info {
+  display: flex;
+  align-items: center;
+}
+
+.dentist-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.dentist-details {
+  font-size: 14px;
+}
+
+.dentist-details .name {
+  font-weight: bold;
+}
+
+.dentist-details .location {
+  color: #666;
+}
+
+.availability {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.availability.available {
+  color: green;
+}
+
+.availability.unavailable {
+  color: red;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btn-appointment {
+  background: #3a61d0;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-appointment:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.more-info {
+  color: #2c7873;
+  font-size: 12px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.dentist-list-container {
+  max-height: 300px; /* Adjust the height as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px; /* Add padding if desired */
+  border: 1px solid #ddd; /* Optional border for styling */
+  border-radius: 4px;
+}
+
+.dentist-list-container::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.dentist-list-container::-webkit-scrollbar-thumb {
+  background-color: #888; /* Scrollbar color */
+  border-radius: 4px; /* Rounded edges for the scrollbar */
+}
+
+.dentist-list-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Scrollbar hover color */
+}
+
+/* Initial state for modal dialog (hidden) */
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+/* Visible state for modal dialog (shown) */
+.modal.show .modal-dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#userProfileImage,
+#dropdownProfileImage {
+  width: 40px;
+  height: 40px;
+}
+
+#dropdownProfileImage {
+  width: 60px;
+  height: 60px;
+}
+
+.dropdown-item.text-center {
+  padding: 15px;
+}
+
+#modalProfileImage {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #ddd;
+  padding: 5px;
+}
+
+#viewProfileModal .modal-body h5 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#viewProfileModal .modal-body p {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.text-success {
+  color: green !important;
+}
+
+.text-warning {
+  color: orange !important;
+}
+
+.bg {
+  background-color: #1c444d;
+}
+
+.dentist-list-container {
+  min-height: 400px; /* Adjust this value as needed */
+}
+
+.dentist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Optional: Adds spacing between dentist items */
+}
+
+.dentist-item {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.dentist-avatar {
+  width: 50px; /* Set width for avatar */
+  height: 50px; /* Set height for avatar */
+  border-radius: 50%; /* Make it circular */
+  overflow: hidden; /* Ensure the image stays within the circular shape */
+  margin-right: 15px; /* Space between the avatar and details */
+}
+
+.avatar-img {
+  width: 100%; /* Make image fill the container */
+  height: 100%;
+  object-fit: cover; /* Ensure the image doesn't stretch */
+}
+
+.dentist-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+.dentist-info {
+  display: flex;
+  align-items: center;
+}
+
+.dentist-details {
+  margin-left: 10px;
+}
+
+#calendarContainer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  text-align: center;
+}
+
+.day {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.day.not-available {
+  background-color: #f8d7da;
+  color: #721c24;
+  pointer-events: none;
+}
+
+.day.no-office {
+  background-color: #ffeeba;
+  color: #856404;
+  pointer-events: none;
+}
+
+.day.available {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.day.selected {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-right: 10px; /* Space between box and label */
+  border-radius: 3px;
+}
+
+.legend-box.available {
+  background-color: #d4edda;
+}
+
+.legend-box.no-office {
+  background-color: #ffeeba;
+}
+
+.legend-box.not-available {
+  background-color: #f8d7da;
+}
+
+/* Adjust spacing between legend items */
+.calendar-legend .d-flex {
+  margin-right: 30px; /* Space between legend items */
+}
+
+h6{
+  font-size: x-large;
+}
+
+table .action-column {
+  min-width: 200px; /* Adjust width as needed */
+}
+
+.gap-2 > * {
+  margin-left: 8px; /* Adjust the gap size */
+}
+.gap-2 > *:first-child {
+  margin-left: 0; /* Remove gap for the first button */
+}
+
+/* Ensure label is visible */
+.form-group label {
+  font-size: 1rem;
+  color: #6c757d; /* Adjust the color as needed */
+  margin-bottom: 0.5rem; /* Add space below the label */
+}
+
+/* Button styles */
+.input-group .input-group-append .btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Adjust the icon size */
+.icon-eye, .icon-eye-slash {
+  font-size: 1.2rem;
+  color: #000;  /* Change color as necessary */
+}
+
+/* Ensure the input is styled correctly */
+.form-control {
+  font-size: 1rem;
+  padding-right: 2rem; /* Space for the eye icon */
+}

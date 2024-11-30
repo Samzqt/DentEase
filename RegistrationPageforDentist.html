@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="img/teeth.png"/>
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Custom Style -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome for Eye Icon -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
+  <title>DentEase - Dentist Registration</title>
+</head>
+<body>
+
+<!-- Specialties Modal -->
+<div id="specialtiesModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Select Specialties</h5>
+        <button type="button" class="close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty1" value="General Dentistry">
+          <label class="form-check-label" for="specialty1">General Dentistry</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty2" value="Orthodontics">
+          <label class="form-check-label" for="specialty2">Orthodontics</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty3" value="Endodontics">
+          <label class="form-check-label" for="specialty3">Endodontics</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty4" value="Periodontics">
+          <label class="form-check-label" for="specialty4">Periodontics</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty5" value="Prosthodontics">
+          <label class="form-check-label" for="specialty5">Prosthodontics</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty6" value="Oral and Maxillofacial Surgery">
+          <label class="form-check-label" for="specialty6">Oral and Maxillofacial Surgery</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty7" value="Oral and Maxillofacial Pathology">
+          <label class="form-check-label" for="specialty7">Oral and Maxillofacial Pathology</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty8" value="Oral and Maxillofacial Radiology">
+          <label class="form-check-label" for="specialty8">Oral and Maxillofacial Radiology</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty9" value="Pediatric Dentistry">
+          <label class="form-check-label" for="specialty9">Pediatric Dentistry</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty10" value="Dental Public Health">
+          <label class="form-check-label" for="specialty10">Dental Public Health</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+        <button type="button" class="btn btn-primary" onclick="saveSpecialties()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Terms and Conditions Modal -->
+<div id="termsModal" class="modal" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Terms and Conditions</h5>
+        <button type="button" class="close" onclick="closeTermsModal()">&times;</button>
+      </div>
+      <div class="modal-body" id="termsContent" style="height: 300px; overflow-y: auto;">
+        <p>1. <b>Acceptance of Terms</b> <br>By registering with or using DentEase, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with these terms, you must not use our services.</p>
+        <p>2. <b>Description of Services</b> <br>DentEase provides an online platform designed to connect dentists and patients, facilitate appointment bookings, and manage dental practice services. We reserve the right to modify, suspend, or discontinue any feature of our services without prior notice.</p>
+        <p>3. <b>User Accounts</b> <br>Users must create an account to access certain features. You are responsible for ensuring the confidentiality of your login credentials. Activities conducted under your account are your responsibility. You agree to notify us immediately of any unauthorized use of your account.</p>
+        <p>4. <b>User Conduct</b> <br>Users agree to:
+          <li>Use DentEase in compliance with applicable laws and regulations.</li>
+          <li>Respect other users, avoiding harassment, abuse, or any form of harm.</li>
+          <li>Avoid unauthorized commercial activities through our platform.</li>
+          <br>Prohibited activities include:
+          <li>Misrepresentation of identity or qualifications.</li>
+          <li>Interference with or disruption of DentEase’s operations.</li>
+          <li>Unauthorized data collection or misuse of content.</li></p>
+        <p>5. <b>Professional Conduct</b> <br>Registered dentists are expected to:
+          <li>Provide accurate and up-to-date credentials and licensing information.</li>
+          <li>Adhere to ethical practices in patient care and communication.</li>
+          <li>Respect patient privacy in accordance with applicable privacy laws.</li>
+          <br>DentEase reserves the right to verify and suspend accounts found in violation.</p>
+        <p>6. <b>Intellectual Property</b> <br>All platform content, including text, graphics, logos, and software, is owned by DentEase or its licensors and protected under copyright and trademark laws. Unauthorized use or reproduction is prohibited.
+        </p>
+        <p>7. <b>Limitation of Liability</b> <br>To the maximum extent allowed by law, DentEase will not be liable for:
+          <li>Losses resulting from interruptions, errors, or omissions in our services.</li>
+          <li>Any indirect, incidental, or consequential damages arising from the use or inability to use our platform.</li></p>
+        <p>8. <b>Indemnification</b> <br>You agree to indemnify DentEase, its affiliates, employees, and agents against claims or damages resulting from your violation of these Terms or misuse of our services.</p>
+        <p>9. <b>Privacy and Data Protection</b> <br>DentEase is committed to protecting user data. By using the platform, you consent to the collection, use, and processing of your information in accordance with our Privacy Policy.</p>
+        <p>10. <b>Changes to Terms and Conditions</b> <br>DentEase reserves the right to modify these Terms and Conditions at any time. Notification of changes will be posted on our platform. Continued use after changes signifies your acceptance.
+        </p>
+        <p>11. <b>Termination</b> <br>DentEase may suspend or terminate accounts for violations of these Terms or misuse of the platform. Users may discontinue their account at any time by contacting support.</p>
+        <p>By using DentEase, you agree to these Terms and Conditions. If you have any questions or concerns, please contact us at <b>support@dentease.com</b>.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="agreeButton" disabled>I Agree</button>
+        <button type="button" class="btn btn-secondary" onclick="closeTermsModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-lg-flex half">
+  <div class="bg order-1 order-md-2" style="background-image: url('img/dental-chair.jpg');"></div>
+  <div class="contents order-2 order-md-1">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7">
+          <div class="mb-4">
+            <h3>Create an Account as Dentist.</h3>
+            <p class="mb-4">Fill in your details to register.</p>
+          </div>
+          
+          <!-- Registration Form -->
+          <form id="registrationForm">
+            <!-- Full Name Field -->
+            <div class="form-group first">
+              <label for="fullname">Full Name</label>
+              <input type="text" class="form-control" id="fullname" required>
+            </div>
+            
+            <!-- Username Field -->
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" class="form-control" id="username" required>
+            </div>
+            
+            <!-- Email Field -->
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            
+            <!-- Password Field with Eye Icon beside it -->
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="d-flex">
+                <input 
+                  type="password" 
+                  class="form-control" 
+                  id="password" 
+                  required 
+                  data-toggle="tooltip" 
+                  data-placement="right" 
+                  title="Your password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter, one number, and one special character."
+                >
+                <span 
+                  class="input-group-text" 
+                  id="showPasswordToggle" 
+                  onclick="togglePassword()" 
+                  style="cursor: pointer; padding: 0.5rem 1rem;">
+                  <i id="eyeIcon" class="fa fa-eye"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Confirm Password Field with Eye Icon beside it -->
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <div class="d-flex">
+                <input 
+                  type="password" 
+                  class="form-control" 
+                  id="confirm-password" 
+                  required
+                >
+                <span 
+                  class="input-group-text" 
+                  id="showConfirmPasswordToggle" 
+                  onclick="toggleConfirmPassword()" 
+                  style="cursor: pointer; padding: 0.5rem 1rem;">
+                  <i id="confirmEyeIcon" class="fa fa-eye"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Specialties Field -->
+            <div class="form-group last mb-3">
+              <button type="button" class="btn btn-outline-secondary mb-3" onclick="openModal()">Choose Specialties</button>
+              <input type="text" id="specialties" class="form-control" readonly placeholder="Selected specialties will appear here">
+            </div>
+
+            <!-- Terms and Conditions Checkbox -->
+            <div>
+              <label class="control control--checkbox">
+                <input type="checkbox" id="termsCheckbox">
+                <span class="caption">
+                  I agree to the 
+                  <a href="#" class="text-primary" onclick="openTermsModal()">Terms and Conditions</a>
+                </span>
+                <div class="control__indicator"></div>
+              </label>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="login">
+              <button type="submit" class="btn btn-primary btn-user btn-block">Register</button>
+            </div>
+            
+            <span class="d-block text-center my-4 text-muted">&mdash; or &mdash;</span>
+            
+            <!-- Social Login Options -->
+            <div class="social-login">
+              <a href="PatientDashboard.html" class="facebook btn d-flex justify-content-center align-items-center">
+                <span class="icon-facebook mr-3"></span> Register with Facebook
+              </a>
+              <a href="PatientDashboard.html" class="google btn d-flex justify-content-center align-items-center">
+                <span class="icon-google mr-3"></span> Register with Google
+              </a>
+            </div>
+
+            <!-- Log in Link -->
+            <div class="text-center mt-4">
+              <p>Already have an Account? 
+                <a href="LoginPageforDentist.html" class="text-primary">Login!</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Registration Script -->
+<script>
+// Elements for specialties modal
+  const specialtiesModal = document.getElementById('specialtiesModal');
+  const specialtiesInput = document.getElementById('specialties');
+  const specialtiesCheckboxes = specialtiesModal.querySelectorAll('.form-check-input');
+
+  // Open the specialties modal
+  function openModal() {
+    specialtiesModal.style.display = 'block';
+  }
+
+  // Close the specialties modal
+  function closeModal() {
+    specialtiesModal.style.display = 'none';
+  }
+
+  // Save selected specialties and close modal
+  function saveSpecialties() {
+    const selectedSpecialties = [];
+    specialtiesCheckboxes.forEach(checkbox => {
+      if (checkbox.checked) {
+        selectedSpecialties.push(checkbox.value);
+      }
+    });
+    specialtiesInput.value = selectedSpecialties.join(', '); // Join selected specialties into a comma-separated string
+    closeModal(); // Close modal
+  }
+
+  // Close modal when clicking outside of it
+  window.addEventListener('click', function(event) {
+    if (event.target === specialtiesModal) {
+      closeModal();
+    }
+  });
+
+  document.getElementById('registrationForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    const fullname = document.getElementById("fullname").value;
+    const username = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+
+    // Password Match Validation
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    // Check if username already exists
+    if (localStorage.getItem(username)) {
+      alert("Username is already taken. Please choose another.");
+      return;
+    }
+
+    // Save user to localStorage
+    const userData = { fullname, email, password };
+    localStorage.setItem(username, JSON.stringify(userData));
+    alert("Registration successful! You can now log in.");
+    window.location.href = "LoginPageforDentist.html"; // Redirect to login
+  });
+
+   // Prevent form submission if Terms and Conditions checkbox is not checked
+   document.querySelector("form").addEventListener("submit", function(event) {
+    const termsCheckbox = document.getElementById("terms");
+    if (!termsCheckbox.checked) {
+      alert("Please agree to the Terms and Conditions to proceed.");
+      event.preventDefault();
+    }
+  });
+
+    // Elements
+const termsModal = document.getElementById('termsModal');
+const termsContent = document.getElementById('termsContent'); // Ensure this matches the modal's content div ID
+const agreeButton = document.getElementById('agreeButton');
+const termsCheckbox = document.getElementById('termsCheckbox'); // Match the checkbox ID in your form
+
+// Open the Terms and Conditions modal
+function openTermsModal() {
+  termsModal.style.display = 'block';
+}
+
+// Close the Terms and Conditions modal
+function closeTermsModal() {
+  termsModal.style.display = 'none';
+}
+
+// Enable "I Agree" when scrolled to the bottom
+termsContent.addEventListener('scroll', () => {
+  const isScrolledToBottom =
+    termsContent.scrollTop + termsContent.clientHeight >= termsContent.scrollHeight;
+  agreeButton.disabled = !isScrolledToBottom; // Enable button only when fully scrolled
+});
+
+// Handle "I Agree" button click
+agreeButton.addEventListener('click', () => {
+  termsCheckbox.checked = true; // Mark the checkbox as checked
+  closeTermsModal(); // Close the modal
+});
+
+// Password validation logic
+document.getElementById('password').addEventListener('input', function () {
+    const password = this.value;
+
+    // Regex to check password complexity
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+    if (passwordRegex.test(password)) {
+      // If valid, add success classes
+      this.classList.add('is-valid');
+      this.classList.remove('is-invalid');
+    } else {
+      // If invalid, add error classes
+      this.classList.add('is-invalid');
+      this.classList.remove('is-valid');
+    }
+  });
+
+    // Initialize tooltips
+    $(document).ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+
+
+// Toggle password visibility for password field
+function togglePassword() {
+  const passwordField = document.getElementById('password');
+  const eyeIcon = document.getElementById('eyeIcon');
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    eyeIcon.classList.remove('fa-eye');
+    eyeIcon.classList.add('fa-eye-slash');
+  } else {
+    passwordField.type = "password";
+    eyeIcon.classList.remove('fa-eye-slash');
+    eyeIcon.classList.add('fa-eye');
+  }
+}
+
+// Toggle password visibility for confirm password field
+function toggleConfirmPassword() {
+  const confirmPasswordField = document.getElementById('confirm-password');
+  const confirmEyeIcon = document.getElementById('confirmEyeIcon');
+  if (confirmPasswordField.type === "password") {
+    confirmPasswordField.type = "text";
+    confirmEyeIcon.classList.remove('fa-eye');
+    confirmEyeIcon.classList.add('fa-eye-slash');
+  } else {
+    confirmPasswordField.type = "password";
+    confirmEyeIcon.classList.remove('fa-eye-slash');
+    confirmEyeIcon.classList.add('fa-eye');
+  }
+}
+
+</script>
+
+</body>
+</html>

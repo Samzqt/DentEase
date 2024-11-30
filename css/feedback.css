@@ -1,0 +1,75 @@
+  .feedback-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .feedback-form h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+
+  .feedback-form input, .feedback-form textarea {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rating-label {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+
+  .rating {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .send-btn {
+    background-color: #3a61d0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .send-btn:hover {
+    background-color: #004f37;
+  }
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.feedback-list {
+  margin-top: 20px;
+}
+
+.feedback-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feedback-list .list-group-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+}

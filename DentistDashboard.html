@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DentEase - Dashboard</title>
+
+    <link rel="icon" type="image/png" href="img/teeth.png"/>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/feedback.css">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="DentistDashboard.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-tooth"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">DentEase</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="DentistDashboard.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Manage
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="PatientList.html">
+                    <i class="fas fa-fw fa-tooth"></i>
+                    <span>Patients Consultation</span></a>
+            </li>
+
+
+
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="DentistAppointment.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Appointments</span></a>
+            </li> -->
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                    
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span id="userName" class="mr-2 d-none d-lg-inline text-gray-600 small">Default User</span>
+                            <img id="userProfileImage" class="img-profile rounded-circle" src="img/undraw_profile.svg" alt="User Profile">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#viewProfileModal">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Profile
+                            </a>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#editProfileModal">
+                                <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Settings
+                            </a>
+                            <a class="dropdown-item" href="#">
+                                <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Activity Log
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Logout
+                            </a>
+                            </div>
+                        </li>
+                        
+                        <!-- Modal for Viewing Profile -->
+                        <div class="modal fade" id="viewProfileModal" tabindex="-1" role="dialog" aria-labelledby="viewProfileModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="viewProfileModalLabel">User Profile</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                <img id="modalProfileImage" class="rounded-circle mb-3" src="img/undraw_profile.svg" alt="Profile Image" style="width: 100px; height: 100px;">
+                                <h5 id="modalUserName" class="font-weight-bold text-gray-800">Default User</h5>
+                                <p id="modalUserEmail" class="text-gray-600">default@example.com</p>
+                                </div>
+                                <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        
+                    
+                    <!-- Modal for Editing Profile (now in Settings) -->
+                    <div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                            <form id="profileForm">
+                                <!-- Name Input -->
+                                <div class="form-group">
+                                <label for="profileName">Name</label>
+                                <input type="text" class="form-control" id="profileName" placeholder="Enter your name" required>
+                                </div>
+                                <!-- Email Input -->
+                                <div class="form-group">
+                                <label for="profileEmail">Email</label>
+                                <input type="email" class="form-control" id="profileEmail" placeholder="Enter your email" required>
+                                </div>
+                                <!-- Profile Picture Input -->
+                                <div class="form-group">
+                                <label for="profilePicture">Profile Picture</label>
+                                <input type="file" class="form-control-file" id="profilePicture" accept="image/*">
+                                </div>
+                            </form>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" id="saveProfileButton">Save Changes</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <!-- <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Welcome back, Dr. Lawrence</h1>
+                    </div> -->
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        
+                    </div>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Analytics</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Daily</a>
+                                            <a class="dropdown-item" href="#">Monthly</a>
+                                            <a class="dropdown-item" href="#">Yearly</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="myAreaChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pie Chart -->
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="col-xl-12 col-md-6 mb-4">
+                                <div class="card border-left-primary shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                    Total Revenue</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">₱1,815,000</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-peso-sign fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Earnings (Monthly) Card Example -->
+                            <div class="col-xl-12 col-md-6 mb-4">
+                                <div class="card border-left-success shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                    Total Patients</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">122</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-tooth fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            
+    
+                            <!-- Pending Requests Card Example -->
+                            <div class="col-xl-12 col-md-6 mb-4">
+                                <div class="card border-left-warning shadow h-100 py-2">
+                                    <div class="card-body">
+                                        <div class="row no-gutters align-items-center">
+                                            <div class="col mr-2">
+                                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                    Total Doctors</div>
+                                                <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <i class="fas fa-user-doctor fa-2x text-gray-300"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-8 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Upcoming Appointments</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Phone No.</th>
+                                                    <th>Age</th>
+                                                    <th>Gender</th>
+                                                    <th>Schedule Time</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="appointmentTableBody">
+                                                <tr>
+                                                    <td>Kent Samson</td>
+                                                    <td>09461001237</td>
+                                                    <td>22</td>
+                                                    <td>Male</td>
+                                                    <td>9:00AM - Nov 27, 2024</td>
+                                                    <td class="text-center">
+                                                        <div class="d-flex justify-content-center gap-2">
+                                                            <!-- Reschedule Button with Tooltip -->
+                                                            <button class="btn btn-danger btn-sm" data-toggle="tooltip" title="Reschedule this appointment" onclick="rescheduleAppointment(this)">
+                                                                <i class="fas fa-calendar-alt"></i> Reschedule
+                                                            </button>
+                                                            <!-- Add to Pending List Button with Tooltip -->
+                                                            <button class="btn btn-warning btn-sm" data-toggle="tooltip" title="Add to Pending List" onclick="addToPendingList(this)">
+                                                                <i class="fas fa-clock"></i> Add to Pending
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kent Samson</td>
+                                                    <td>09461001237</td>
+                                                    <td>22</td>
+                                                    <td>Male</td>
+                                                    <td>10:00AM - Nov 27, 2024</td>
+                                                    <td class="text-center">
+                                                        <div class="d-flex justify-content-center gap-2">
+                                                            <!-- Reschedule Button with Tooltip -->
+                                                            <button class="btn btn-danger btn-sm" data-toggle="tooltip" title="Reschedule this appointment" onclick="rescheduleAppointment(this)">
+                                                                <i class="fas fa-calendar-alt"></i> Reschedule
+                                                            </button>
+                                                            <!-- Add to Pending List Button with Tooltip -->
+                                                            <button class="btn btn-warning btn-sm" data-toggle="tooltip" title="Add to Pending List" onclick="addToPendingList(this)">
+                                                                <i class="fas fa-clock"></i> Add to Pending
+                                                            </button>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <!-- Add more rows as needed -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Pending List</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="pendingAppointmentsTable" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Phone No.</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Pending appointments dynamically added here -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; DentEase 2024</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="loginpage.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script src="js/demo/datatables-demo.js"></script>
+
+    <script>
+// Delegated event listeners for reschedule and cancel actions
+const tableBody = document.querySelector('#dataTable tbody');
+
+// Handle Reschedule Action
+tableBody.addEventListener('click', function (e) {
+    if (e.target.classList.contains('reschedule')) {
+        const row = e.target.closest('tr');
+        const name = row.cells[0].textContent;
+        const schedule = row.cells[2].textContent;
+        const newSchedule = prompt(`Reschedule appointment for ${name}\nCurrent Schedule: ${schedule}\nEnter new date and time:`, schedule);
+        if (newSchedule) {
+            row.cells[2].textContent = newSchedule;
+            alert(`${name}'s appointment has been rescheduled to ${newSchedule}`);
+        }
+        e.preventDefault(); // Prevent default link behavior
+    }
+});
+
+// Handle Cancel Action
+tableBody.addEventListener('click', function (e) {
+    if (e.target.classList.contains('cancel-appointment')) {
+        const row = e.target.closest('tr');
+        const name = row.cells[0].textContent;
+        if (confirm(`Are you sure you want to cancel the appointment for ${name}?`)) {
+            row.remove();
+        }
+        e.preventDefault(); // Prevent default link behavior
+    }
+});
+
+
+        // Reschedule Appointment
+        function rescheduleAppointment(element) {
+            // Get the row
+            const row = element.closest('tr');
+            const name = row.cells[0].textContent;
+            const schedule = row.cells[4].textContent;
+
+            // Open a modal for rescheduling
+            const newSchedule = prompt(`Reschedule appointment for ${name}\nCurrent Schedule: ${schedule}\nEnter new date and time:`, schedule);
+            if (newSchedule) {
+                // Update the schedule in the table
+                row.cells[4].textContent = newSchedule;
+                alert(`${name}'s appointment has been rescheduled to ${newSchedule}`);
+            }
+        }
+
+        // Cancel Appointment
+        function cancelAppointment(element) {
+            // Get the row
+            const row = element.closest('tr');
+            const name = row.cells[0].textContent;
+
+            if (confirm(`Are you sure you want to cancel the appointment for ${name}?`)) {
+                // Remove the row
+                row.remove();
+                alert(`${name}'s appointment has been canceled.`);
+            }
+        }
+
+
+// Mock user profile data (replace this with data fetched from your backend)
+const userProfile = {
+  name: 'Default User',
+  email: 'default@example.com',
+  profileImage: 'img/undraw_profile.svg',
+};
+
+// Populate the profile modal
+function populateProfileModal() {
+  document.getElementById('modalUserName').textContent = userProfile.name;
+  document.getElementById('modalUserEmail').textContent = userProfile.email;
+  document.getElementById('modalProfileImage').src = userProfile.profileImage;
+}
+
+// Load user profile data when the modal is shown
+$('#viewProfileModal').on('show.bs.modal', populateProfileModal);
+
+// Update profile info in dropdown
+function updateDropdownProfile() {
+  const userNameElement = document.getElementById('userName');
+  const userProfileImageElement = document.getElementById('userProfileImage');
+
+  if (userNameElement) userNameElement.textContent = userProfile.name;
+  if (userProfileImageElement) userProfileImageElement.src = userProfile.profileImage;
+}
+
+// Save profile changes from modal
+document.getElementById('saveProfileButton').addEventListener('click', function () {
+  const newName = document.getElementById('profileName').value.trim();
+  const newEmail = document.getElementById('profileEmail').value.trim();
+  const profilePictureInput = document.getElementById('profilePicture');
+
+  // Update name and email
+  if (newName) userProfile.name = newName;
+  if (newEmail) userProfile.email = newEmail;
+
+  // Update profile picture if a file is selected
+  if (profilePictureInput.files && profilePictureInput.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      userProfile.profileImage = e.target.result;
+      updateDropdownProfile();
+    };
+    reader.readAsDataURL(profilePictureInput.files[0]);
+  } else {
+    updateDropdownProfile();
+  }
+
+  // Close the modal
+  $('#editProfileModal').modal('hide');
+});
+
+// Initialize profile info on page load
+document.addEventListener('DOMContentLoaded', updateDropdownProfile);
+
+
+function addToPendingList(element) {
+        // Get the selected row
+        const row = element.closest("tr");
+
+        // Extract name and phone number from the row
+        const name = row.children[0].textContent.trim();
+        const phone = row.children[1].textContent.trim();
+
+        // Create a new row for the Pending Appointments table
+        const pendingTable = document.querySelector("#pendingAppointmentsTable tbody");
+        const newRow = document.createElement("tr");
+
+        // Add only Name, Phone Number, and Contact Button
+        newRow.innerHTML = `
+            <td>${name}</td>
+            <td>${phone}</td>
+            <td>
+                <button class="btn btn-primary btn-sm" onclick="contactPatient(this, '${phone}')">
+                    <i class="fas fa-phone"></i> Contact
+                </button>
+            </td>
+        `;
+
+        // Append the new row to the Pending Appointments table
+        pendingTable.appendChild(newRow);
+
+        // Remove the original row from the Upcoming Appointments table
+        row.remove();
+
+        // Optionally, display a success message
+        alert(`${name} has been moved to the Pending Appointments.`);
+    }
+
+    function contactPatient(button, phoneNumber) {
+        // Show popup message
+        alert('Contacting patient at ' + phoneNumber);
+
+        // Disable the button to prevent further clicks
+        button.disabled = true;
+        button.textContent = "Contacted"; // Update button text to indicate contacted
+    }
+
+    $(document).ready(function() {
+        // Initialize tooltips
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+    </script>
+
+</body>
+
+</html>
